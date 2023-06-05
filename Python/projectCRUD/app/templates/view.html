@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Visualização</h1>
+    </div>
+
+    <div class="col-8 m-auto pt-3 text-center">
+        <a href="/" class="btn btn-info">Voltar</a>
+    </div>
+
+    <div class="col-8 m-auto pt-2 pb-4 text-center">
+        <strong>Nome do Usuário do veículo: </strong>{{db.Nome_do_usuário_do_veículo}}<br>
+        <strong>Placa do Carro: </strong>{{db.Placa_do_Carro}}<br>
+        <strong>Marca do Carro: </strong>{{db.Marca_do_Carro}}<br>
+        <strong>Ano do Carro: </strong>{{db.Ano_do_Carro}}<br>
+        <strong>Cor do veículo: </strong>{{db.Cor_do_veiculo}}<br>
+        <strong>Número do RENAVAM: </strong>{{db.Número_do_RENAVAM}}<br>
+    </div>
+  </body>
+</html>

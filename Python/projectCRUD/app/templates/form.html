@@ -16,17 +16,22 @@
     </div>
 
     <div class="col-8 m-auto pt-2 pb-4 text-center">
-        <form name ="form" id="form" method="post">
+        <div id="result"></div>
+
+        <form name ="form" id="form" action="{% if db %}/update/{{db.id}}/{% else %}/create/{% endif %}" method="post">
             {% csrf_token %}
             <!--{{form.as_p}}-->
             <div class="form-group mt-4">Nome do Usuário do veículo:  {{form.Nome_do_usuário_do_veículo}}</div>
             <div class="form-group mt-4">Placa do Carro:  {{form.Placa_do_Carro}}</div>
             <div class="form-group mt-4">Marca do Carro:  {{form.Marca_do_Carro}}</div>
             <div class="form-group mt-4">Ano do Carro:  {{form.Ano_do_Carro}}</div>
-            <div class="form-group mt-4">Cor do veículo:  {{form.Cor_do_veículo}}</div>
+            <div class="form-group mt-4">Cor do veículo:  {{form.Cor_do_veiculo}}</div>
             <div class="form-group mt-4 pb-4">Número do RENAVAM:  {{form.Número_do_RENAVAM}}</div>
             <input type="submit" class="btn btn-success" value="Salvar">
         </form>
     </div>
+
+    {% load static %}
+    <script src="{% static 'javascript.js' %}"></script>
   </body>
 </html>
