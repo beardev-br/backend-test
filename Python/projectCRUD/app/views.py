@@ -2,13 +2,14 @@ from django.shortcuts import render, redirect
 from app.forms import CarrosForm
 from app.models import Carros
 from django.core.paginator import Paginator
+from django.db.models import Q
 
 # Create your views here.
 def home(request):
     data = {}
     search = request.GET.get('search')
     if search:
-        data['db'] = Carros.objects.filter(id__icontains=search,Cor_do_veiculo__icontains=search,Placa_do_Carro__icontains=search)     
+        data['db'] = Carros.objects.filter(Q(id__icontains=search)|Q(Cor_do_veiculo__icontains=search)|Q(Placa_do_Carro__icontains=search))     
     else:
         data['db'] = Carros.objects.all()
     #all = Carros.objects.all()
