@@ -80,12 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sistema',
-        'PORT': '3306',
-        'HOST': 'localhost',
         'USER': 'root',
         'PASSWORD': 'Digitaledu$1ZXC',
-        'OPTIONS': {
-            'init_command': 'SET default_storage_engine=InnoDB',
+        'HOST': 'localhost',
+        'PORT': '3306',
         }
     }
 }
