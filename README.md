@@ -26,7 +26,6 @@ Precisamos de um sistema que salve as informações básicas dos veículos da no
 
 Não precisamos de mais informações, apenas as ditas acima.
 
-
 Gostaria de ter disponível para o FrontEnd consultar:
 
 1. Rota de busca por id (Ou seja, o ID de identificação do veículo)
