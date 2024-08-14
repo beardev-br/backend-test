@@ -1,51 +1,63 @@
-___
-#### 🇧🇷 Portuguese
-___
-# Backend: Teste técnico
+# Vehicle Management System
 
-### Panorama Geral
+Este é um sistema de gerenciamento de veículos desenvolvido em Python utilizando PyQt5 e MySQL. O sistema permite adicionar, buscar, listar, editar e deletar veículos no banco de dados.
 
-Neste teste, você deverá desenvolver um CRUD voltado a veículos.
-Você poderá escolher um combo de tecnologias a serem usadas, que são as seguintes:
+## Funcionalidades
 
-1. Python + MySQL
-2. Typescript + NodeJS + MongoDB + Express + Mongoose
-3. NodeJS + NestJS + Prisma + PostgreSQL
+- **Adicionar Veículo**: Permite adicionar um novo veículo ao banco de dados.
+- **Listar Todos os Veículos**: Exibe todos os veículos cadastrados em uma tabela.
+- **Buscar Veículo**: Realiza a busca de veículos pelo ID, placa ou cor.
+- **Editar Veículo**: Permite editar os detalhes de um veículo selecionado.
+- **Deletar Veículo**: Remove um veículo do banco de dados.
 
-### Detalhes do que deve ser construído
-#### Regra de negócio
+## Tecnologias Utilizadas
 
-Precisamos de um sistema que salve as informações básicas dos veículos da nossa empresa, que são:
+- **Linguagem**: Python
+- **Biblioteca GUI**: PyQt5
+- **Banco de Dados**: MySQL
 
-1. Nome do Usuário do veículo
-2. Placa do Carro
-3. Marca do Carro
-4. Ano do Carro
-5. Cor do veículo
-6. Número do Renavam.
+## Estrutura do Projeto
 
-Não precisamos de mais informações, apenas as ditas acima.
+- `main.py`: Arquivo principal que inicializa a aplicação e define a interface do usuário.
+- `dbConnection.py`: Contém a classe `DatabaseConnection`, responsável pela conexão e operações no banco de dados MySQL.
+- `vehicle.py`: Define a classe `Vehicle`, que representa os atributos de um veículo.
+- `EditVehicleDialog.py`: Implementa a janela de diálogo para editar os detalhes de um veículo.
+- `style.py`: Aplica estilos personalizados à interface do usuário.
+- `README.md`: Documento de descrição do projeto.
 
-Gostaria de ter disponível para o FrontEnd consultar:
+## Instalação
 
-1. Rota de busca por id (Ou seja, o ID de identificação do veículo)
-2. Consulta por placa
-3. Consulta por cor do veículo
-4. Criar novos veículos
-5. Atualizar novos veículos
-6. Deletar veículos
-7. Buscar todos os veículos
+1. **Clone o repositório:**
 
-Este teste técnico tem duração de 2 semanas, e necessita ser entregue em uma branch neste repositório.
+   ```bash
+   git clone https://github.com/tairony-cristian/vehicle-management-system.git
 
+2. **Crie o banco de dados MySQL:**
 
-#### Regras:
+    CREATE DATABASE vehicle_management;
 
-1. O código deve ser construido em inglês
-2. Commits devem ser feitos regularmente, no mínimo 1 commit por dia (Eliminatório)
-3. Quaisquer dúvidas, favor chamar no Discord.
-4. Lembre-se de adicionar um .gitignore para não enviar pacotes (node_modules e afins)
+3. **Crie a tabela de veículos:**
 
-Boa sorte, que Deus te abençõe e São Josemaria interceda por ti.
+    USE vehicle_management;
 
-PRA CIMA!
+    CREATE TABLE vehicles (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        user_name VARCHAR(255) NOT NULL,
+        plate VARCHAR(255) NOT NULL,
+        brand VARCHAR(255) NOT NULL,
+        year INT NOT NULL,
+        color VARCHAR(255) NOT NULL,
+        renavam VARCHAR(255) NOT NULL
+    );
+
+4. **Instale as dependências:**
+
+   pip install -r requirements.txt
+
+**Como Executar**
+    
+Após a instalação, você pode executar a aplicação com o comando:
+python main.py
+
+ 
+ 
